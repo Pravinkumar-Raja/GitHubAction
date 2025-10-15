@@ -52,6 +52,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "Hello Windows"
+
+  build-service:
+    needs: build-app
+    runs-on: windows-latest
+    steps:
+      - run: echo "Hello service"
   
   package:
     needs: [build-app, build-db]
