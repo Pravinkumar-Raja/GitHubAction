@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
 
   build-api:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Bilding API"
 
