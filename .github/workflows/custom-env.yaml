@@ -1,0 +1,35 @@
+on: 
+  
+  workflow_dispatch:
+
+env:
+  Day_of_week: Monday
+  test_Var: value-1
+
+jobs:
+  mainjob:
+    runs-on: ubuntu-latest
+    name: Print Env Variables
+
+    env:
+      Greeting: Dear
+      test_Var: value-2
+    
+    steps:
+      - name: Print a custom env variable
+        run: echo "Today is ${{ env.Day_of_week }}"
+
+      - name: Print a job level env variable
+        run: echo "$Greeting, Today is ${{ env.Day_of_week }}"
+
+      - name: Print a step level env variable
+
+        env:
+          Greeting: Hello
+          test_Var: value-3
+          
+        run: echo "$Greeting, Today is ${{ env.Day_of_week }}"
+
+      - name: Print test_Var variable
+        run: echo "test_Var is ${{ env.test_Var }}"
+  
