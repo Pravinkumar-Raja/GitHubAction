@@ -24,12 +24,5 @@ jobs:
 
       - name: Print a step level env variable
 
-        env:
-          Greeting: Hello
-          test_Var: value-3
-          
-        run: echo "$Greeting, Today is ${{ env.Day_of_week }}"
-
-      - name: Print test_Var variable
-        run: echo "test_Var is ${{ env.test_Var }}"
+    
   
