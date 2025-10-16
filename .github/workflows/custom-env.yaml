@@ -21,8 +21,5 @@ jobs:
 
       - name: Print a job level env variable
         run: echo "$Greeting, Today is ${{ env.Day_of_week }}"
-
-      - name: Print a step level env variable
-
-    
+  
   
