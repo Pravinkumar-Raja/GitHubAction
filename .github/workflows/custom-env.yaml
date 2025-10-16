@@ -20,6 +20,8 @@ jobs:
         run: echo "Today is ${{ env.Day_of_week }}"
 
       - name: Print a job level env variable
-        run: echo "$Greeting, Today is ${{ env.Day_of_week }}"
+        run: 
+          echo "$Greeting, Today is ${{ env.Day_of_week }}"
+          echo "Test Var is ${{ env.test_Var }}"
   
   
