@@ -2,7 +2,7 @@ on:
   workflow_dispatch
 
 jobs:
-  Custom GITHUB_ENV Var Demo:
+  GITHUB_ENV_Var-Demo:
     runs-on: ubuntu-latest
  
     steps:
